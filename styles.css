@@ -1,6 +1,6 @@
 
 body{
-    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Rubik', sans-serif;
     color: white;
     display: grid;
     background: hsl(226, 43%, 10%);
@@ -38,19 +38,59 @@ body{
     overflow: hidden;
 }
 
-.activities > div{
-    background: hsl(235, 46%, 20%);
-    height: 83%;
-    border-radius: 15px;
-    position: absolute;
-    bottom: 0;
-}
 
 .activities > img{
     position: absolute;
     right: 6%;
     top: -3%;
     width: 30%;
+}
+
+.content{
+    background: hsl(235, 46%, 20%);
+    height: 83%;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 0;
+    display: inline;
+    box-sizing: border-box;
+    padding: 25px;
+    width: 100%;
+}
+
+.head{
+    font-weight: 500;
+}
+
+.head a {
+    text-decoration: none;
+    font-size: 25px;
+    line-height: 0;
+    color: white;
+    position: absolute;
+    right: 25px;
+
+}
+
+
+.time{
+
+}
+
+.previous{
+
+}
+
+.daily{
+
+}
+
+.weekly{
+    display: none;
+}
+
+.monthly{
+    display: none;
 }
 
 #careCard > img{
@@ -81,3 +121,4 @@ body{
 #careCard{
     background: hsl(43, 84%, 65%);
 }
+
