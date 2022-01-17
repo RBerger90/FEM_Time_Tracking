@@ -22,9 +22,47 @@ body{
 }
 
 #userCard > div{
+    display: inline-flex;
+    flex-direction: column;
     background: hsl(246, 80%, 60%);
     border-radius: 15px;
     height: 68%;
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.6);
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+#userCard img{
+    width: 80px;
+    border: 4px solid white;
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+
+#name{
+    font-size: 3em;
+    color: white;
+    font-weight: 300;
+
+}
+
+#userCard p{
+    text-decoration: none;
+    color: hsl(235, 45%, 61%);
+    font-size: 0.9em;
+    line-height: 0;
+    margin-left: 30px;
+    margin-top: 35px;
+}
+
+#userCard p:hover{
+    cursor: pointer;
+}
+
+#userCard p.active{
+    color: white;
 }
 
 .activities{
@@ -74,15 +112,19 @@ body{
 
 
 .time{
-
+    margin-top: 40px;
+    font-size: 2.7em;
+    font-weight: 300;
 }
 
 .previous{
-
+    font-size: 0.8em;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.6)
 }
 
 .daily{
-
+    display: none;
 }
 
 .weekly{
@@ -91,6 +133,10 @@ body{
 
 .monthly{
     display: none;
+}
+
+.activeState{
+    display: block;
 }
 
 #careCard > img{
