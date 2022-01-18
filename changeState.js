@@ -4,7 +4,13 @@ let daily = document.getElementById("byDay");
 let weekly = document.getElementById("byWeek");
 let monthly = document.getElementById("byMonth");
 
-
+document.addEventListener("DOMContentLoaded", () => {
+    addClass(weekly,"active");
+    let tab=document.getElementsByClassName("weekly");
+    for(let i=0; i < tab.length; i++){
+        addClass(tab[i],"activeState");
+    }
+});
 
 daily.addEventListener("click", () =>{
     clear();
@@ -34,12 +40,26 @@ monthly.addEventListener("click", () =>{
 });
 
 function clear() {
-    removeClass(daily,"active");
-    removeClass(weekly,"active");
-    removeClass(monthly,"active");
-    let tab=document.getElementsByClassName("activeState");
-    for(let i=0; i < tab.length; i++){
-        removeClass(tab[i],"activeState");
+    if(hasClass(daily,"active")){
+        removeClass(daily,"active");
+        let tab=document.getElementsByClassName("daily");
+        for(let i=0; i < tab.length; i++){
+            removeClass(tab[i],"activeState");
+        }
+    }
+    else if(hasClass(weekly,"active")){
+        removeClass(weekly,"active");
+        let tab=document.getElementsByClassName("weekly");
+        for(let i=0; i < tab.length; i++){
+            removeClass(tab[i],"activeState");
+        }
+    }
+    else if(hasClass(monthly,"active")){
+        removeClass(monthly,"active");
+        let tab=document.getElementsByClassName("monthly");
+        for(let i=0; i < tab.length; i++){
+            removeClass(tab[i],"activeState");
+        }
     }
 }
 

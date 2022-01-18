@@ -59,6 +59,7 @@ body{
 
 #userCard p:hover{
     cursor: pointer;
+    color:white;
 }
 
 #userCard p.active{
@@ -96,6 +97,11 @@ body{
     width: 100%;
 }
 
+.content:hover{
+    background-color: hsl(235, 46%, 35%);
+    cursor: pointer;
+}
+
 .head{
     font-weight: 500;
 }
@@ -122,6 +128,7 @@ body{
     margin-top: 20px;
     color: rgba(255, 255, 255, 0.6)
 }
+
 
 .daily{
     display: none;
