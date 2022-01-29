@@ -1,108 +1,111 @@
-
-body{
-    font-family: 'Rubik', sans-serif;
+body {
+    font-family: "Rubik", sans-serif;
     color: white;
     display: grid;
-    background: hsl(226, 43%, 10%);
+    background: #0f1424;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    margin: 165px;
-    padding: 0;
+    grid-gap: 4vh;
+    width: 100%;
+    padding: 25vh 11vw;
+    box-sizing: border-box;
 }
 
-#userCard{
-    background: hsl(235, 46%, 20%);
+#userCard {
+    background: #1c1f4a;
     border-radius: 15px;
     grid-column: 1/1;
-    grid-row: 1/ span 2;
-    height: 520px;
-    width: 255px;
+    grid-row: 1/span 2;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-#profile{
+#profile {
     display: inline-flex;
     flex-direction: column;
-    background: hsl(246, 80%, 60%);
+    background: #5847eb;
     border-radius: 15px;
-    height: 68%;
     font-size: 0.8em;
     color: rgba(255, 255, 255, 0.6);
     box-sizing: border-box;
-    padding: 30px;
+    padding: 10%;
 }
 
-#profile img{
-    width: 80px;
+#profile img {
+    width: 40%;
     border: 4px solid white;
     border-radius: 50%;
     box-sizing: border-box;
-    margin-bottom: 50px;
+    margin-bottom: 20%;
 }
 
-#name{
+#profile p{
+    margin: 0;
+}
+
+#name {
     font-size: 3em;
     color: white;
     font-weight: 300;
-
 }
 
-#buttons p{
+#buttons{
+    padding: 8% 10%;
+}
+
+#buttons p {
     text-decoration: none;
-    color: hsl(235, 45%, 61%);
+    color: #6f76c8;
     font-size: 0.9em;
-    line-height: 0;
-    margin-left: 30px;
-    margin-top: 35px;
+    padding: 3% 0;
+    margin: 0;
 }
 
-#buttons p:hover{
+#buttons p:hover {
     cursor: pointer;
-    color:white;
-}
-
-#buttons p.active{
     color: white;
 }
 
-.activities{
-    width: 255px;
-    height: 245px;
+#buttons p.active {
+    color: white;
+}
+
+.activities {
+    width: 100%;
+    height: 100%;
     background: black;
     border-radius: 15px;
-    margin-left: 30px;
-    margin-bottom: 30px;
     position: relative;
     overflow: hidden;
 }
 
-
-.activities > img{
+.activities > img {
     position: absolute;
     right: 6%;
     top: -3%;
     width: 30%;
 }
 
-.content{
-    background: hsl(235, 46%, 20%);
+.content {
+    background: #1c1f4a;
     height: 83%;
     border-radius: 15px;
     position: absolute;
     bottom: 0;
     display: inline;
     box-sizing: border-box;
-    padding: 25px;
+    padding: 10%;
     width: 100%;
 }
 
-.content:hover{
-    background-color: hsl(235, 46%, 35%);
+.content:hover {
+    background-color: #303782;
     cursor: pointer;
 }
 
-.head{
+.head {
     font-weight: 500;
 }
 
@@ -110,132 +113,162 @@ body{
     text-decoration: none;
     font-size: 25px;
     line-height: 0;
-    color: white;
+    color: rgba(255, 255, 255, 0.6);
     position: absolute;
     right: 25px;
-
 }
 
+.head a:hover{
+    color: white;
+}
 
-.time{
-    margin-top: 40px;
+.time {
+    margin-top: 10%;
     font-size: 2.7em;
     font-weight: 300;
 }
 
-.previous{
+.previous {
     font-size: 0.8em;
-    margin-top: 20px;
-    color: rgba(255, 255, 255, 0.6)
+    margin-top: 2%;
+    color: rgba(255, 255, 255, 0.6);
 }
 
-
-.daily{
+.daily {
     display: none;
 }
 
-.weekly{
+.weekly {
     display: none;
 }
 
-.monthly{
+.monthly {
     display: none;
 }
 
-.activeState{
+.activeState {
     display: block;
 }
 
-#careCard > img{
+#careCard > img {
     top: -7%;
 }
 
-
-#workCard{
-    background: hsl(15, 100%, 70%);
+#workCard {
+    background: #ff8c66;
 }
 
-#playCard{
-    background: hsl(195, 74%, 62%);
+#playCard {
+    background: #56c2e6;
 }
 
-#studyCard{
-    background: hsl(348, 100%, 68%);
+#studyCard {
+    background: #ff5c7c;
 }
 
-#exerciseCard{
-    background: hsl(145, 58%, 55%);
+#exerciseCard {
+    background: #4acf81;
 }
 
-#socialCard{
-    background: hsl(264, 64%, 52%);
+#socialCard {
+    background: #7536d3;
 }
 
-#careCard{
-    background: hsl(43, 84%, 65%);
+#careCard {
+    background: #f1c65b;
 }
-
 
 /*On mobile*/
-@media screen and (max-width: 490px){
+@media screen and (max-device-width: 490px) {
     body {
-        grid-template-rows: repeat(7, 1fr);
-        grid-template-columns: repeat(1, 1fr);
-        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 10vh 6vw;
     }
 
-    #userCard{
-        grid-column: 1/1;
+    #userCard {
         height: 200px;
         width: 100%;
     }
 
-    #profile{
+    #profile {
         display: inline-flex;
-        flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
         height: 68%;
-        padding-left: 120px;
+        padding: 6%;
     }
 
-    #profile img{
+    #profile img {
         margin: 0;
-        position: absolute;
-        left: 40px;
+        width: 28%;
     }
 
-    #name{
+    #profile>p{
+        padding-top: 4%;
+        padding-left: 4%;
+        margin: 0;
+    }
+
+    #name {
+        padding-top: 2%;
+        padding-left: 4%;
         font-size: 2.2em;
-        color: rgba(255, 255, 255, 90%);
-        font-weight: 300;
     }
 
-    #buttons{
+    #buttons {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
+        padding: 0;
     }
 
-    #buttons p{
+    #buttons p {
         margin: 0;
-        padding: 30px 0 0 45px;
+        padding: 6% 0 0 12%;
         font-size: 1.3em;
     }
 
-
-    #userCard p:hover{
-        cursor: pointer;
-        color:white;
-    }
-
-    #userCard p.active{
-        color: white;
-    }
-
-    .activities{
-        height: 150px;
+    .activities {
+        height: 200px;
         width: 100%;
-        margin: 20px 0 0 0;
+        margin: 0;
     }
-}
 
+    .activities > img {
+        width: 20%;
+    }
+
+    .content {
+        height: 75%;
+        padding: 8%;
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-self: center;
+    }
+
+    .head {
+        font-size: 20px;
+        padding-bottom: 5%;
+        width: 100%;
+    }
+
+    .time{
+        margin:0;
+        width: 55%;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .previous{
+        width: 45%;
+        margin: 0;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}
